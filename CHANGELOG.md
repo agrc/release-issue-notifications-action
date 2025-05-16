@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.6...v1.0.7) (2025-05-16)
+
+
+### Dependencies
+
+* fy25q4 package updates ([a5f86f9](https://github.com/agrc/release-issue-notifications-action/commit/a5f86f99ed25698d55c6c89c1497d802137f8d8c))
+
 ## [1.0.6](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.5...v1.0.6) (2025-01-07)
 
 
