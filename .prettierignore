@@ -1,6 +1,9 @@
+.github/
+.vscode/
+CHANGELOG.md
+coverage/
 dist/
 node_modules/
-coverage/
 package-lock.json
-CHANGELOG.md
-.vscode/
+pnpm-lock.yaml
+pnpm-workspace.yaml

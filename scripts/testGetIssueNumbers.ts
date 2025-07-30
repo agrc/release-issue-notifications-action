@@ -1,11 +1,10 @@
 import { Octokit } from '@octokit/core';
-import { getIssueNumbersBetweenCommits } from 'src/utils';
-import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
 import { paginateRest } from '@octokit/plugin-paginate-rest';
+import { restEndpointMethods } from '@octokit/plugin-rest-endpoint-methods';
+import { getIssueNumbersBetweenCommits } from '../src/utils';
 
 const token = process.argv[2];
-const lastReleaseCommit =
-  process.argv[3] === 'null' ? undefined : process.argv[3];
+const lastReleaseCommit = process.argv[3] === 'null' ? undefined : process.argv[3];
 const currentReleaseCommit = process.argv[4];
 const owner = process.argv[5];
 const repo = process.argv[6];
@@ -20,12 +19,7 @@ const GitHub = Octokit.plugin(restEndpointMethods, paginateRest);
 const octokit = new GitHub({ auth: token });
 
 async function run() {
-  const issues = await getIssueNumbersBetweenCommits(
-    octokit,
-    lastReleaseCommit,
-    currentReleaseCommit,
-    { owner, repo },
-  );
+  const issues = await getIssueNumbersBetweenCommits(octokit, lastReleaseCommit, currentReleaseCommit, { owner, repo });
   console.log(issues);
 }
 

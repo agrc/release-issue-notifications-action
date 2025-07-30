@@ -1,56 +1,49 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
+  "name": "@ugrc/release-issue-notifications-action",
   "version": "1.0.7",
-  "author": "",
   "private": true,
-  "homepage": "https://github.com/actions/typescript-action",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
-  },
-  "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
-  },
+  "description": "Comment on issues affected by a release",
   "keywords": [
     "actions",
     "node",
-    "setup"
+    "release",
+    "comments"
   ],
-  "exports": {
-    ".": "./dist/index.js"
+  "homepage": "https://github.com/agrc/release-issue-notifications-action",
+  "bugs": {
+    "url": "https://github.com/agrc/release-issue-notifications-action/issues"
   },
-  "engines": {
-    "node": ">=20"
-  },
-  "scripts": {
-    "bundle": "npm run format:write && npm run prepare",
-    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
-    "format:write": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "lint": "eslint . && tsc --noEmit",
-    "prepare": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
-    "prepare:watch": "npm run prepare -- --watch",
-    "test": "vitest --reporter verbose --coverage",
-    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run prepare"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agrc/release-issue-notifications-action.git"
   },
   "license": "MIT",
+  "author": "ugrc-developers@utah.gov",
+  "type": "module",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "check": "tsc -b",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "test": "vitest run --reporter verbose --coverage"
+  },
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
     "issue-parser": "^7.0.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.31.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@total-typescript/tsconfig": "^1.0.4",
     "@types/issue-parser": "^3.0.5",
     "@types/node": "^22.16.4",
-    "@vercel/ncc": "^0.38.3",
+    "@ugrc/eslint-config": "^1.2.3",
     "@vitest/coverage-v8": "^3.2.4",
     "eslint": "^9.31.0",
     "eslint-config-plugin": "^1.0.11",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-packagejson": "^2.5.19",

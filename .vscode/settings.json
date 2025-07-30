@@ -3,7 +3,8 @@
     "Basehead",
     "commitish",
     "packagejson",
-    "prereleases"
+    "prereleases",
+    "UGRC"
   ],
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",

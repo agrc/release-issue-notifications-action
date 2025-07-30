@@ -21,15 +21,12 @@ export async function getIssueNumbersBetweenCommits(
       per_page: 100,
     });
   } else {
-    const responses: PaginateResponse[] = await octokit.paginate(
-      'GET /repos/{owner}/{repo}/compare/{basehead}',
-      {
-        owner: repo.owner,
-        repo: repo.repo,
-        basehead: `${lastReleaseCommit}...${currentReleaseCommit}`,
-        per_page: 100,
-      },
-    );
+    const responses: PaginateResponse[] = await octokit.paginate('GET /repos/{owner}/{repo}/compare/{basehead}', {
+      owner: repo.owner,
+      repo: repo.repo,
+      basehead: `${lastReleaseCommit}...${currentReleaseCommit}`,
+      per_page: 100,
+    });
 
     commits = responses.flatMap((response) => response.commits);
   }
@@ -37,7 +34,7 @@ export async function getIssueNumbersBetweenCommits(
   // parse commit message to get list of issue numbers
   const issues = commits
     .map((commit) => parse(commit.commit.message))
-    .map((parsed) => parsed.actions.close.map((close) => close.issue))
+    .map((parsed) => parsed.actions.close?.map((close) => close.issue) || [])
     .flat();
 
   return issues;

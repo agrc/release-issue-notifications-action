@@ -31,20 +31,16 @@ async function run() {
 
     core.debug(`releases: ${JSON.stringify(releases)}`);
     const lastRelease = releases.find(
-      (release) =>
-        release.prerelease === currentRelease.prerelease &&
-        release.id !== currentRelease.id,
+      (release) => release.prerelease === currentRelease.prerelease && release.id !== currentRelease.id,
     );
     core.info(`last release: ${lastRelease?.name}`);
     const lastReleaseCommit = lastRelease?.target_commitish;
     core.info(`last release commit: ${lastReleaseCommit}`);
 
-    const issues = await getIssueNumbersBetweenCommits(
-      octokit,
-      lastReleaseCommit,
-      releaseCommit,
-      { owner: repo.owner, repo: repo.repo },
-    );
+    const issues = await getIssueNumbersBetweenCommits(octokit, lastReleaseCommit, releaseCommit, {
+      owner: repo.owner,
+      repo: repo.repo,
+    });
 
     core.info(`issues: ${issues.join(', ')}`);
 
