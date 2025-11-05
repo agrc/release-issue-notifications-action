@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.9](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.8...v1.0.9) (2025-11-05)
+
+
+### Dependencies
+
+* **dev:** bump the safe-dependencies group across 1 directory with 7 updates ([835b032](https://github.com/agrc/release-issue-notifications-action/commit/835b0322345ddab0e1c6ea06f5338f3ceba41272))
+* node 20 -&gt; 24 ([98f0dc1](https://github.com/agrc/release-issue-notifications-action/commit/98f0dc1f624e481ea7d2f903bf1886a455af7120))
+* pnpm audit fix ([923496b](https://github.com/agrc/release-issue-notifications-action/commit/923496b8da16b2efe9c95e0e7e38f7f24104a709))
+
 ## [1.0.8](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.7...v1.0.8) (2025-07-30)
 
 
