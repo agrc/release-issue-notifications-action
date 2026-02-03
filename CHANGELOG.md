@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.0.10](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.9...v1.0.10) (2026-02-03)
+
+
+### Dependencies
+
+* bump js-yaml from 3.14.1 to 3.14.2 ([28fdd0f](https://github.com/agrc/release-issue-notifications-action/commit/28fdd0f40c5fa07016291fdc942542415f5034c4))
+* **dev:** bump the major-dependencies group with 3 updates ([00be2f3](https://github.com/agrc/release-issue-notifications-action/commit/00be2f394d3ba425591f7c03df81d4dcad664b8a))
+* **dev:** bump the safe-dependencies group with 5 updates ([8c43e7a](https://github.com/agrc/release-issue-notifications-action/commit/8c43e7adb482b4ef902659cf7a6e922f75e77d98))
+
+
+### Documentation
+
+* Add attribution for GitHub Copilot assistance ([e7cdaaf](https://github.com/agrc/release-issue-notifications-action/commit/e7cdaafc95e544457cc04dc56f3da6b09c12f462))
+
 ## [1.0.9](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.8...v1.0.9) (2025-11-05)
 
 
