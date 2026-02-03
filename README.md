@@ -48,3 +48,7 @@ You may test some of the utilities that this action uses locally by running scri
 ```bash
 npx tsx scripts/testGetIssueNumbers.ts $(gh auth token) 2a90bc980886321aca554eddc47b98c7638617b3 89327edb99c324c82aced47238c6b29e03f0a23d agrc release-issue-notifications-action
 ```
+
+## Attribution
+
+This project was developed with the assistance of [GitHub Copilot](https://github.com/features/copilot).
