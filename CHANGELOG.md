@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.11](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.10...v1.0.11) (2026-02-18)
+
+
+### Dependencies
+
+* bump js-yaml from 3.14.1 to 3.14.2 ([eba1cf8](https://github.com/agrc/release-issue-notifications-action/commit/eba1cf8f0bc45e4f3654a4013f1f2f0a0a858f02))
+
 ## [1.0.10](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.9...v1.0.10) (2026-02-03)
 
 
