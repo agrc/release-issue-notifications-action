@@ -2,7 +2,7 @@ import * as core from '@actions/core';
 import * as github from '@actions/github';
 import { getIssueNumbersBetweenCommits } from './utils';
 
-const octokit = github.getOctokit(core.getInput('repo-token'));
+const octokit: ReturnType<typeof github.getOctokit> = github.getOctokit(core.getInput('repo-token'));
 
 async function run() {
   try {
@@ -31,7 +31,8 @@ async function run() {
 
     core.debug(`releases: ${JSON.stringify(releases)}`);
     const lastRelease = releases.find(
-      (release) => release.prerelease === currentRelease.prerelease && release.id !== currentRelease.id,
+      (release: { prerelease: boolean; id: number }) =>
+        release.prerelease === currentRelease.prerelease && release.id !== currentRelease.id,
     );
     core.info(`last release: ${lastRelease?.name}`);
     const lastReleaseCommit = lastRelease?.target_commitish;

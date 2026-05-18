@@ -2,8 +2,13 @@ import * as github from '@actions/github';
 import issueParser from 'issue-parser';
 
 const parse = issueParser('github');
-type PaginateResponse = {
-  commits: { commit: { message: string } }[];
+type CommitWithMessage = {
+  commit: { message: string };
+};
+type CompareCommitsResponse = {
+  data: {
+    commits: CommitWithMessage[];
+  };
 };
 
 export async function getIssueNumbersBetweenCommits(
@@ -12,7 +17,7 @@ export async function getIssueNumbersBetweenCommits(
   currentReleaseCommit: string,
   repo: { owner: string; repo: string },
 ): Promise<string[]> {
-  let commits;
+  let commits: CommitWithMessage[];
   if (!lastReleaseCommit) {
     // get all commits since the beginning of the repo on the default branch
     commits = await octokit.paginate(octokit.rest.repos.listCommits, {
@@ -21,14 +26,16 @@ export async function getIssueNumbersBetweenCommits(
       per_page: 100,
     });
   } else {
-    const responses: PaginateResponse[] = await octokit.paginate('GET /repos/{owner}/{repo}/compare/{basehead}', {
-      owner: repo.owner,
-      repo: repo.repo,
-      basehead: `${lastReleaseCommit}...${currentReleaseCommit}`,
-      per_page: 100,
-    });
-
-    commits = responses.flatMap((response) => response.commits);
+    commits = await octokit.paginate(
+      'GET /repos/{owner}/{repo}/compare/{basehead}',
+      {
+        owner: repo.owner,
+        repo: repo.repo,
+        basehead: `${lastReleaseCommit}...${currentReleaseCommit}`,
+        per_page: 100,
+      },
+      (response: CompareCommitsResponse) => response.data.commits,
+    );
   }
 
   // parse commit message to get list of issue numbers
