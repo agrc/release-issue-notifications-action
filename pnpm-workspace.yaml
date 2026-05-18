@@ -1,5 +1,11 @@
-onlyBuiltDependencies:
-  - esbuild
+
+minimumReleaseAge: 10080
+minimumReleaseAgeStrict: true
+minimumReleaseAgeExclude:
+  - '@ugrc/*'
 
 overrides:
   vite@>=7.0.0 <=7.0.7: '>=7.0.8'
+
+allowBuilds:
+  esbuild: true
