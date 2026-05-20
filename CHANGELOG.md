@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.12](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.11...v1.0.12) (2026-05-20)
+
+
+### Dependencies
+
+* bump NPM dependencies 🌲 ([b93202c](https://github.com/agrc/release-issue-notifications-action/commit/b93202c079183b91cd68761e266415ffcca3ad0c))
+
 ## [1.0.11](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.10...v1.0.11) (2026-02-18)
 
 
