@@ -20,15 +20,14 @@ on:
   release:
     types: [published]
 
-permissions:
-  contents: read
-  pull-requests: write
-  issues: write
-
 jobs:
   notify:
     name: Notifications
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
 
     steps:
       - name: Release Notifier
