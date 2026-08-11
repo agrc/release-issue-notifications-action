@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.13](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.12...v1.0.13) (2026-08-11)
+
+
+### Dependencies
+
+* bump NPM dependencies 🌲 ([8e10a7a](https://github.com/agrc/release-issue-notifications-action/commit/8e10a7af25a275847e46e331c5f8c3024bc70e73))
+* **dev:** bump the safe-dependencies group across 1 directory with 3 updates ([955b332](https://github.com/agrc/release-issue-notifications-action/commit/955b3321738c384653750fcf54c5cb0130dce7f0))
+
 ## [1.0.12](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.11...v1.0.12) (2026-05-20)
 
 
