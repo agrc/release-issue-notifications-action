@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.14](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.13...v1.0.14) (2026-10-29)
+
+
+### Dependencies
+
+* bump fast-uri from 3.1.5 to 3.1.9 ([#108](https://github.com/agrc/release-issue-notifications-action/issues/108)) ([d9d4f9c](https://github.com/agrc/release-issue-notifications-action/commit/d9d4f9cd496d199bc63d67f0a484294a22aad44a))
+* bump js-yaml from 3.15.1 to 3.15.2 ([#99](https://github.com/agrc/release-issue-notifications-action/issues/99)) ([86a1505](https://github.com/agrc/release-issue-notifications-action/commit/86a1505a2d1326c3a05477371bcf2afae5a8cc26))
+* bump source-map-js from 1.2.1 to 1.2.2 ([#111](https://github.com/agrc/release-issue-notifications-action/issues/111)) ([c7375da](https://github.com/agrc/release-issue-notifications-action/commit/c7375da67a0f4de4d5d6a271b6ef70386c3575f9))
+* bump undici from 6.28.0 to 6.29.1 ([#107](https://github.com/agrc/release-issue-notifications-action/issues/107)) ([5c0910d](https://github.com/agrc/release-issue-notifications-action/commit/5c0910defd779257819588a5959d1b8ffc95d33a))
+* bump vite from 8.0.12 to 8.3.5 ([#110](https://github.com/agrc/release-issue-notifications-action/issues/110)) ([ea0efa8](https://github.com/agrc/release-issue-notifications-action/commit/ea0efa839b646fe1acad8c71cb9d391d276656ad))
+* **dev:** bump the safe-dependencies group across 1 directory with 6 updates ([#112](https://github.com/agrc/release-issue-notifications-action/issues/112)) ([c917d85](https://github.com/agrc/release-issue-notifications-action/commit/c917d85d4ee351fe4c0093f708b67cf31064620e))
+* **dev:** bump vitest from 4.1.10 to 5.0.5 ([#105](https://github.com/agrc/release-issue-notifications-action/issues/105)) ([2cdd0ae](https://github.com/agrc/release-issue-notifications-action/commit/2cdd0aec746e7ced809eb6ce0c38e1f702fb8fdf))
+
 ## [1.0.13](https://github.com/agrc/release-issue-notifications-action/compare/v1.0.12...v1.0.13) (2026-08-11)
 
 
